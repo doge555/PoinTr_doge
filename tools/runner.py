@@ -189,8 +189,7 @@ def validate(base_model, test_dataloader, epoch, ChamferDisL1, ChamferDisL2, val
     test_metrics = AverageMeter(Metrics.names())
     category_metrics = dict()
     n_samples = len(test_dataloader) # bs is 1
-
-    interval =  n_samples // 10
+    interval =  n_samples // 3 # relate to the size of val set, orginal is 10
 
     with torch.no_grad():
         for idx, (taxonomy_ids, model_ids, data) in enumerate(test_dataloader):
