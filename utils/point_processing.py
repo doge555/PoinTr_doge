@@ -37,7 +37,7 @@ def preprocess_for_pointtr(
     P = P / scale
 
     point_partial = o3d.geometry.PointCloud(o3d.utility.Vector3dVector(P))
-    return point_partial, centroid, scale
+    return point_partial, np.asarray(centroid, dtype=np.float32), float(scale)
 
 def postprocessing_from_pointr(arr, centroid, scale):
     arr = np.asarray(arr, dtype=np.float32)

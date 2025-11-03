@@ -23,11 +23,11 @@ bnmscheduler: {
 }}
 
 dataset : {
-  train : { _base_: cfgs/dataset_configs/PCN.yaml, 
+  train : { _base_: PoinTr_doge/cfgs/dataset_configs/PCN.yaml, 
             others: {subset: 'train'}},
-  val : { _base_: cfgs/dataset_configs/PCN.yaml, 
+  val : { _base_: PoinTr_doge/cfgs/dataset_configs/PCN.yaml, 
             others: {subset: 'test'}},
-  test : { _base_: cfgs/dataset_configs/PCN.yaml, 
+  test : { _base_: PoinTr_doge/cfgs/dataset_configs/PCN.yaml, 
             others: {subset: 'test'}}}
 model : {
   NAME: PoinTr, num_pred: 14336, num_query: 224, knn_layer: 1, trans_dim: 384}
